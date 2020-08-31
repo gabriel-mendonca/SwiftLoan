@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LU9-Gr-bTt">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recuperar senha-->
+        <scene sceneID="LlN-db-0wD">
+            <objects>
+                <viewController title="Recuperar senha" modalPresentationStyle="fullScreen" id="LU9-Gr-bTt" customClass="EsqueciSenhaViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S66-HT-iWk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lhe enviaremos um e-mail com mais informações sobre como redefinir sua senha." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Df-Hg-51e">
+                                <rect key="frame" x="10" y="153.5" width="355" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bw-jT-JJn">
+                                <rect key="frame" x="35" y="234.5" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-gD-FZn">
+                                <rect key="frame" x="20" y="255.5" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DOq-eh-wOD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edm-v5-HOL">
+                                <rect key="frame" x="20" y="80" width="335" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-50-dpc">
+                                <rect key="frame" x="112.5" y="370.5" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.097312674030000004" green="0.3785948771" blue="0.17086926960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="C5M-06-h22"/>
+                                    <constraint firstAttribute="width" constant="150" id="noY-ad-emB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enviar email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSendEmail:" destination="LU9-Gr-bTt" eventType="touchUpInside" id="6OB-6J-Ihr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="edm-v5-HOL" firstAttribute="leading" secondItem="qeL-k2-GcT" secondAttribute="leading" constant="20" id="3pz-J8-VT5"/>
+                            <constraint firstItem="6Bw-jT-JJn" firstAttribute="leading" secondItem="qeL-k2-GcT" secondAttribute="leading" constant="35" id="71K-xj-1Tg"/>
+                            <constraint firstItem="fo6-50-dpc" firstAttribute="top" secondItem="Uoe-gD-FZn" secondAttribute="bottom" constant="65" id="FyU-2c-DXG"/>
+                            <constraint firstItem="6Bw-jT-JJn" firstAttribute="top" secondItem="2Df-Hg-51e" secondAttribute="bottom" constant="40" id="GFb-Ad-KSc"/>
+                            <constraint firstItem="qeL-k2-GcT" firstAttribute="trailing" secondItem="edm-v5-HOL" secondAttribute="trailing" constant="20" id="KFQ-pb-8EZ"/>
+                            <constraint firstItem="2Df-Hg-51e" firstAttribute="top" secondItem="edm-v5-HOL" secondAttribute="bottom" constant="40" id="M4Y-cX-1ey"/>
+                            <constraint firstItem="Uoe-gD-FZn" firstAttribute="top" secondItem="6Bw-jT-JJn" secondAttribute="bottom" id="OKx-fY-nCc"/>
+                            <constraint firstItem="2Df-Hg-51e" firstAttribute="leading" secondItem="qeL-k2-GcT" secondAttribute="leading" constant="10" id="VLe-4H-D1I"/>
+                            <constraint firstItem="qeL-k2-GcT" firstAttribute="trailing" secondItem="2Df-Hg-51e" secondAttribute="trailing" constant="10" id="Xef-53-Qrl"/>
+                            <constraint firstItem="edm-v5-HOL" firstAttribute="top" secondItem="qeL-k2-GcT" secondAttribute="top" constant="80" id="Xw2-8B-KmW"/>
+                            <constraint firstItem="fo6-50-dpc" firstAttribute="centerX" secondItem="S66-HT-iWk" secondAttribute="centerX" id="i6D-SL-urK"/>
+                            <constraint firstItem="qeL-k2-GcT" firstAttribute="trailing" secondItem="Uoe-gD-FZn" secondAttribute="trailing" constant="20" id="qE8-Eq-LqI"/>
+                            <constraint firstItem="Uoe-gD-FZn" firstAttribute="leading" secondItem="qeL-k2-GcT" secondAttribute="leading" constant="20" id="tMq-8X-eod"/>
+                            <constraint firstItem="qeL-k2-GcT" firstAttribute="trailing" secondItem="6Bw-jT-JJn" secondAttribute="trailing" constant="30" id="xGR-28-hGG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qeL-k2-GcT"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEmail" destination="fo6-50-dpc" id="enf-ZR-O8D"/>
+                        <outlet property="textEmail" destination="Uoe-gD-FZn" id="Ssw-N2-aAx"/>
+                        <segue destination="14V-mV-XqF" kind="unwind" identifier="screenEntrar" unwindAction="unwindLoginWithSegue:" id="bTa-6f-scg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kvp-sA-iGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="14V-mV-XqF" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="92"/>
+        </scene>
+    </scenes>
+</document>

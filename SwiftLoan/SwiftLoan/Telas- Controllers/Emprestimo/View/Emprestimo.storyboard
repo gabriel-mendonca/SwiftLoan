@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SOw-tH-8ai">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Empréstimo-->
+        <scene sceneID="chI-KZ-lda">
+            <objects>
+                <viewController title="Empréstimo" id="SOw-tH-8ai" customClass="EmprestimoViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIj-gf-crB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSG-CZ-ra3">
+                                <rect key="frame" x="35" y="40" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="digite " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E6p-Xy-ITI">
+                                <rect key="frame" x="20" y="61" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hjI-8q-8QF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parcelas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5w-f5-dPV">
+                                <rect key="frame" x="35" y="121" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecione" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSv-oB-OPn">
+                                <rect key="frame" x="20" y="142" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kbG-ii-wPn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data da primeiro parcela" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-MO-77I">
+                                <rect key="frame" x="35" y="202" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecione" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSs-SH-bkm">
+                                <rect key="frame" x="20" y="223" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Nh2-Ag-VCN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,85% ao mês" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-fC-SRj">
+                                <rect key="frame" x="35" y="283" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSt-DD-R7m">
+                                <rect key="frame" x="97.5" y="354" width="180" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Q2-ap-LuI"/>
+                                    <constraint firstAttribute="width" constant="180" id="L7d-Jx-zxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Contratar empréstimo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEmprestimo:" destination="SOw-tH-8ai" eventType="touchUpInside" id="Dpc-OL-tKn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cSs-SH-bkm" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="20" id="28V-WW-5Mj"/>
+                            <constraint firstItem="YSt-DD-R7m" firstAttribute="top" secondItem="HVf-fC-SRj" secondAttribute="bottom" constant="50" id="3Wt-Ew-CzY"/>
+                            <constraint firstItem="HVf-fC-SRj" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="35" id="5GC-yR-FjD"/>
+                            <constraint firstItem="bGd-MO-77I" firstAttribute="top" secondItem="sSv-oB-OPn" secondAttribute="bottom" constant="15" id="AQW-R9-Ae9"/>
+                            <constraint firstItem="fSG-CZ-ra3" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="35" id="MEZ-UR-3qT"/>
+                            <constraint firstItem="bGd-MO-77I" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="35" id="O9R-nM-h2b"/>
+                            <constraint firstItem="E6p-Xy-ITI" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="20" id="S0r-GQ-Fwb"/>
+                            <constraint firstItem="cSs-SH-bkm" firstAttribute="top" secondItem="bGd-MO-77I" secondAttribute="bottom" id="YwT-9P-eYI"/>
+                            <constraint firstItem="E6p-Xy-ITI" firstAttribute="top" secondItem="fSG-CZ-ra3" secondAttribute="bottom" id="ZEi-F4-G5b"/>
+                            <constraint firstItem="OI3-fT-jGg" firstAttribute="trailing" secondItem="cSs-SH-bkm" secondAttribute="trailing" constant="20" id="azx-Cb-7eU"/>
+                            <constraint firstItem="OI3-fT-jGg" firstAttribute="trailing" secondItem="E6p-Xy-ITI" secondAttribute="trailing" constant="20" id="bLZ-pN-dVK"/>
+                            <constraint firstItem="OI3-fT-jGg" firstAttribute="trailing" secondItem="sSv-oB-OPn" secondAttribute="trailing" constant="20" id="h0e-oZ-Fdp"/>
+                            <constraint firstItem="YSt-DD-R7m" firstAttribute="centerX" secondItem="VIj-gf-crB" secondAttribute="centerX" id="jbz-rA-o5g"/>
+                            <constraint firstItem="fSG-CZ-ra3" firstAttribute="top" secondItem="OI3-fT-jGg" secondAttribute="top" constant="40" id="lDo-Z0-vmz"/>
+                            <constraint firstItem="R5w-f5-dPV" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="35" id="o6O-cl-fpw"/>
+                            <constraint firstItem="sSv-oB-OPn" firstAttribute="leading" secondItem="OI3-fT-jGg" secondAttribute="leading" constant="20" id="o6j-XL-Ds7"/>
+                            <constraint firstItem="R5w-f5-dPV" firstAttribute="top" secondItem="E6p-Xy-ITI" secondAttribute="bottom" constant="15" id="tIG-c8-XCf"/>
+                            <constraint firstItem="OI3-fT-jGg" firstAttribute="trailing" secondItem="HVf-fC-SRj" secondAttribute="trailing" constant="30" id="th2-bz-0z4"/>
+                            <constraint firstItem="HVf-fC-SRj" firstAttribute="top" secondItem="cSs-SH-bkm" secondAttribute="bottom" constant="15" id="yGD-kW-Kp7"/>
+                            <constraint firstItem="sSv-oB-OPn" firstAttribute="top" secondItem="R5w-f5-dPV" secondAttribute="bottom" id="zy5-P9-mBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OI3-fT-jGg"/>
+                    </view>
+                    <connections>
+                        <outlet property="OneParcela" destination="cSs-SH-bkm" id="2Ni-Dw-Ce6"/>
+                        <outlet property="textParcelas" destination="sSv-oB-OPn" id="dhr-fQ-0lo"/>
+                        <outlet property="textValue" destination="E6p-Xy-ITI" id="UoR-7L-bLT"/>
+                        <segue destination="0N3-IS-hrn" kind="show" identifier="screenAcompanhamento" id="bSS-C2-lRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvM-7h-BP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="68"/>
+        </scene>
+        <!--Acompanhamento-->
+        <scene sceneID="fkf-Gx-IUm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Acompanhamento" id="0N3-IS-hrn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KFr-z1-Ji0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8a6-fT-dEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="-175"/>
+        </scene>
+    </scenes>
+</document>

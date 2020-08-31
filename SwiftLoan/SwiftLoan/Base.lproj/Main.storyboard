@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kef-7S-vkC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Sfj-v1-nfu">
+            <objects>
+                <navigationController id="kef-7S-vkC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4r-bg-oMK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wc7-ia-QMj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu0-xV-dVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-851" y="115"/>
+        </scene>
+        <!--Swift Loan-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7A-uo-Njx">
+                                <rect key="frame" x="10" y="787" width="394" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="AKI-XA-2k9"/>
+                                </constraints>
+                                <state key="normal" title="Acessar minha conta"/>
+                                <connections>
+                                    <segue destination="nQ4-iG-DiB" kind="show" id="Ub5-2i-8ca"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6v-ba-RdX">
+                                <rect key="frame" x="10" y="702" width="394" height="55"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="uGe-p6-gPV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Criar uma conta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rI8-Hf-5q4" kind="show" id="fvn-2H-MFy"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcN-PG-s7y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="574"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-GU-Hqc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                                        <connections>
+                                            <segue destination="C05-oP-B2W" kind="embed" id="brK-Be-zmH"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="PsL-GU-Hqc" firstAttribute="top" secondItem="pcN-PG-s7y" secondAttribute="top" id="46c-or-dgx"/>
+                                    <constraint firstItem="PsL-GU-Hqc" firstAttribute="leading" secondItem="pcN-PG-s7y" secondAttribute="leading" id="MUI-pn-M3L"/>
+                                    <constraint firstAttribute="bottom" secondItem="PsL-GU-Hqc" secondAttribute="bottom" id="gbb-8q-4qD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PsL-GU-Hqc" secondAttribute="trailing" id="wUd-z0-yDk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7A-uo-Njx" secondAttribute="trailing" constant="10" id="1NO-ig-c9y"/>
+                            <constraint firstItem="pcN-PG-s7y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Ln-T6-hqw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r7A-uo-Njx" secondAttribute="bottom" constant="20" id="DiO-Nw-fNt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pcN-PG-s7y" secondAttribute="trailing" id="Ivo-El-pkD"/>
+                            <constraint firstItem="r7A-uo-Njx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="L3z-DZ-nt5"/>
+                            <constraint firstItem="w6v-ba-RdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Udt-ym-iHs"/>
+                            <constraint firstItem="w6v-ba-RdX" firstAttribute="top" secondItem="pcN-PG-s7y" secondAttribute="bottom" constant="40" id="YmT-za-iHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w6v-ba-RdX" secondAttribute="trailing" constant="10" id="Yov-K1-PG7"/>
+                            <constraint firstItem="r7A-uo-Njx" firstAttribute="top" secondItem="w6v-ba-RdX" secondAttribute="bottom" constant="30" id="dta-ty-ZCV"/>
+                            <constraint firstItem="pcN-PG-s7y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rP5-S6-kPy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift Loan" id="nse-y6-LO8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="RG2-aE-2Lj">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="C05-oP-B2W" customClass="PageViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="lfM-ac-nu6" kind="show" id="tWU-da-KTw"/>
+                        <segue destination="rSf-GO-wwV" kind="show" id="SzH-ZL-SdG"/>
+                        <segue destination="eKp-Vw-YGP" kind="show" id="PJD-bT-3nR"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNN-PQ-PFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="66"/>
+        </scene>
+        <!--Page1 View Controller-->
+        <scene sceneID="ECP-H0-T3p">
+            <objects>
+                <viewController storyboardIdentifier="Page1ViewController" modalPresentationStyle="fullScreen" id="lfM-ac-nu6" customClass="Page1ViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s6t-Kx-pey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empréstimo descomplicado e sem taxas abusivas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlO-qJ-AGc">
+                                <rect key="frame" x="27.5" y="251" width="359.5" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359.5" id="JQU-Sy-aFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mlO-qJ-AGc" firstAttribute="centerX" secondItem="s6t-Kx-pey" secondAttribute="centerX" id="89C-KG-Gdu"/>
+                            <constraint firstItem="mlO-qJ-AGc" firstAttribute="centerY" secondItem="s6t-Kx-pey" secondAttribute="centerY" id="UZj-Ll-4Vl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q0W-Lq-RP4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ktl-b1-ghS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTj-4U-qGs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="-481"/>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="hMU-qU-KIB">
+            <objects>
+                <viewController storyboardIdentifier="Page2ViewController" modalPresentationStyle="fullScreen" id="rSf-GO-wwV" customClass="Page2ViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DTs-nt-1OZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empréstimo pessoal aprovado em até 24 horas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-8w-Pnp">
+                                <rect key="frame" x="27.5" y="252.5" width="359" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="5os-wz-Mgk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ocd-8w-Pnp" firstAttribute="centerY" secondItem="DTs-nt-1OZ" secondAttribute="centerY" id="241-C8-ulx"/>
+                            <constraint firstItem="Ocd-8w-Pnp" firstAttribute="centerX" secondItem="DTs-nt-1OZ" secondAttribute="centerX" id="ga1-hG-SJy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jAZ-NU-s7x"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAw-Pr-i5q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MIP-Dv-mP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="66"/>
+        </scene>
+        <!--Page3 View Controller-->
+        <scene sceneID="p2P-ug-epd">
+            <objects>
+                <viewController storyboardIdentifier="Page3ViewController" modalPresentationStyle="fullScreen" id="eKp-Vw-YGP" customClass="Page3ViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zup-HU-0Ps">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="574"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crédito simples e rapido sem burocracia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-Pa-QoY">
+                                <rect key="frame" x="35.5" y="252.5" width="343" height="69.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="2XB-ya-XHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yX8-Pa-QoY" firstAttribute="centerY" secondItem="Zup-HU-0Ps" secondAttribute="centerY" id="LZA-Ep-DKa"/>
+                            <constraint firstItem="yX8-Pa-QoY" firstAttribute="centerX" secondItem="Zup-HU-0Ps" secondAttribute="centerX" id="di8-ML-bVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ckf-J2-fEK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DUm-MU-a5O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ap7-Vv-6Ey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="631"/>
+        </scene>
+        <!--Cadastro-->
+        <scene sceneID="my6-Mj-MVe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cadastro" id="rI8-Hf-5q4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d01-1V-hUd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJZ-t5-B9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="-235"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="y4t-1z-zyX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="nQ4-iG-DiB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bwm-F5-NcL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1i-Gf-N3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="-193"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OYQ-on-vQV">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Solicitar empréstimo-->
+        <scene sceneID="qOT-pO-Pzk">
+            <objects>
+                <viewController title="Solicitar empréstimo" id="OYQ-on-vQV" customClass="SolicitarEmprestimoViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hy5-MI-u3U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O valor disponível no momento é de:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teD-CD-MBa">
+                                <rect key="frame" x="30" y="50" width="278.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$:20.000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sf5-MV-omc">
+                                <rect key="frame" x="30" y="71" width="143" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXr-xd-tbX">
+                                <rect key="frame" x="30" y="136.5" width="180" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XlO-Pp-TEv"/>
+                                    <constraint firstAttribute="width" constant="180" id="g4M-Kp-H2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Novo empréstimo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="J0F-61-BE2" kind="show" id="Nyi-Mb-NaK"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oMe-Mz-tfu">
+                                <rect key="frame" x="10" y="226.5" width="365" height="440.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oMe-Mz-tfu" firstAttribute="leading" secondItem="yMm-tC-ZBm" secondAttribute="leading" constant="10" id="8Y9-5B-YzX"/>
+                            <constraint firstItem="teD-CD-MBa" firstAttribute="top" secondItem="yMm-tC-ZBm" secondAttribute="top" constant="50" id="BPv-Uu-1RF"/>
+                            <constraint firstItem="mXr-xd-tbX" firstAttribute="leading" secondItem="yMm-tC-ZBm" secondAttribute="leading" constant="30" id="Ex2-e1-IuC"/>
+                            <constraint firstItem="yMm-tC-ZBm" firstAttribute="bottom" secondItem="oMe-Mz-tfu" secondAttribute="bottom" id="Vqc-uf-CcI"/>
+                            <constraint firstItem="teD-CD-MBa" firstAttribute="leading" secondItem="yMm-tC-ZBm" secondAttribute="leading" constant="30" id="YR5-i0-04M"/>
+                            <constraint firstItem="sf5-MV-omc" firstAttribute="leading" secondItem="yMm-tC-ZBm" secondAttribute="leading" constant="30" id="ZFF-Qr-kAq"/>
+                            <constraint firstItem="mXr-xd-tbX" firstAttribute="top" secondItem="sf5-MV-omc" secondAttribute="bottom" constant="40" id="ZpI-A0-yNS"/>
+                            <constraint firstItem="oMe-Mz-tfu" firstAttribute="top" secondItem="mXr-xd-tbX" secondAttribute="bottom" constant="40" id="eK3-8V-MvG"/>
+                            <constraint firstItem="sf5-MV-omc" firstAttribute="top" secondItem="teD-CD-MBa" secondAttribute="bottom" id="iJg-Lx-d6f"/>
+                            <constraint firstItem="yMm-tC-ZBm" firstAttribute="trailing" secondItem="oMe-Mz-tfu" secondAttribute="trailing" id="ofa-pE-b7C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yMm-tC-ZBm"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="oMe-Mz-tfu" id="cDi-BB-UNM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K2-oL-qAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="93"/>
+        </scene>
+        <!--Objetivo empréstimo-->
+        <scene sceneID="Rfc-0q-MJU">
+            <objects>
+                <viewController title="Objetivo empréstimo" modalPresentationStyle="fullScreen" id="J0F-61-BE2" customClass="ObjetivoEmprestimoViewController" customModule="SwiftLoan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ifR-qJ-Dgm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual objetivo do seu empréstimo?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlF-Z5-vvv">
+                                <rect key="frame" x="30" y="40" width="325" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-QJ-cDr">
+                                <rect key="frame" x="20" y="115" width="335" height="532"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RlF-Z5-vvv" firstAttribute="leading" secondItem="PXL-uK-Xfh" secondAttribute="leading" constant="30" id="IJZ-qg-72R"/>
+                            <constraint firstItem="RlF-Z5-vvv" firstAttribute="top" secondItem="PXL-uK-Xfh" secondAttribute="top" constant="40" id="Ktp-PP-7Dk"/>
+                            <constraint firstItem="PXL-uK-Xfh" firstAttribute="trailing" secondItem="RlF-Z5-vvv" secondAttribute="trailing" constant="20" id="N6i-5X-cdD"/>
+                            <constraint firstItem="5ml-QJ-cDr" firstAttribute="leading" secondItem="PXL-uK-Xfh" secondAttribute="leading" constant="20" id="Pzd-mf-h82"/>
+                            <constraint firstItem="5ml-QJ-cDr" firstAttribute="top" secondItem="RlF-Z5-vvv" secondAttribute="bottom" constant="20" id="R1c-Rq-S7o"/>
+                            <constraint firstItem="PXL-uK-Xfh" firstAttribute="bottom" secondItem="5ml-QJ-cDr" secondAttribute="bottom" constant="20" id="eTp-6I-DvE"/>
+                            <constraint firstItem="PXL-uK-Xfh" firstAttribute="trailing" secondItem="5ml-QJ-cDr" secondAttribute="trailing" constant="20" id="vzI-J6-IoL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PXL-uK-Xfh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Objetivo emprestimo" id="kK9-fW-IVf"/>
+                    <connections>
+                        <outlet property="tableView" destination="5ml-QJ-cDr" id="yg9-ig-1m3"/>
+                        <segue destination="hYN-3p-VyT" kind="show" identifier="screenLoan" id="R4W-2t-sJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPj-al-vnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="92"/>
+        </scene>
+        <!--Emprestimo-->
+        <scene sceneID="9Nc-6n-uwn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Emprestimo" id="hYN-3p-VyT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="202-x5-kYy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEg-C8-IMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1523" y="-148"/>
+        </scene>
+    </scenes>
+</document>
