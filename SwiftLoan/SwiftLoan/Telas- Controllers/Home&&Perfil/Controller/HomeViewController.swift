@@ -12,8 +12,8 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout,UI
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var dado: [Dados] = []
-    var imagem = true
+    private var dado: [Dados] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +21,7 @@ class HomeViewController: UIViewController,UICollectionViewDelegateFlowLayout,UI
 
     }
 
-    func setupCollectionView() {
+    private func setupCollectionView() {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.register(UINib (nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")

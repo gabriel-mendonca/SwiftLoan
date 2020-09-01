@@ -11,6 +11,7 @@ import UIKit
 class DuvidasFrequentesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +30,7 @@ class DuvidasFrequentesViewController: UIViewController, UITableViewDelegate, UI
     ["Se você quiser fazer empréstimo pelo Web ou pelo App você precisará ter em mãos um celular ou um computador."],
     ["Faremos uma análise da sua proposta em 24 horas.(Exceto: sábado,domingo e feriado)."]]
     
-    func setupTableView() {
+    private func setupTableView() {
         
         tableView.delegate = self
         tableView.dataSource = self

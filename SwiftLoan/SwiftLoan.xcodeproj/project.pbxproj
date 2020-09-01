@@ -232,8 +232,8 @@
 				DABAC22224F88D1F0049F695 /* SceneDelegate.swift */,
 				DABAC22624F88D1F0049F695 /* Main.storyboard */,
 				DABAC22424F88D1F0049F695 /* ViewController.swift */,
-				DABAC25E24F99BB80049F695 /* API */,
-				DABAC26124F99C220049F695 /* Data */,
+				DABAC25E24F99BB80049F695 /* Service */,
+				DABAC26124F99C220049F695 /* Model */,
 				DABAC25024F896610049F695 /* Telas- Controllers */,
 				DABAC25B24F8975E0049F695 /* Utils */,
 				DABAC22924F88D260049F695 /* Assets.xcassets */,
@@ -342,20 +342,20 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		DABAC25E24F99BB80049F695 /* API */ = {
+		DABAC25E24F99BB80049F695 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				DABAC25F24F99BCD0049F695 /* Network.swift */,
 			);
-			path = API;
+			path = Service;
 			sourceTree = "<group>";
 		};
-		DABAC26124F99C220049F695 /* Data */ = {
+		DABAC26124F99C220049F695 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				DABAC26224F99C290049F695 /* Models */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DABAC26224F99C290049F695 /* Models */ = {
@@ -462,16 +462,8 @@
 			isa = PBXGroup;
 			children = (
 				DABAC29224FAEC4C0049F695 /* View */,
-				DABAC29124FAEC450049F695 /* Controller */,
 			);
 			path = Regulamento;
-			sourceTree = "<group>";
-		};
-		DABAC29124FAEC450049F695 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		DABAC29224FAEC4C0049F695 /* View */ = {

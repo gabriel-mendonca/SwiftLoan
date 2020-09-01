@@ -8,7 +8,6 @@ target 'SwiftLoan' do
   # Pods for SwiftLoan
 
 pod  'IQKeyboardManagerSwift'
-pod 'InputMask', '~> 3.4'
 
   target 'SwiftLoanTests' do
     inherit! :search_paths

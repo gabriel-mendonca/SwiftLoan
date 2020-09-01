@@ -28,7 +28,7 @@ class AcompanhamentoViewController: UIViewController {
         
     }
     
-    func triggerProgressView() {
+   private func triggerProgressView() {
 
            progressProcessando.progress = 1.0
            
@@ -36,23 +36,11 @@ class AcompanhamentoViewController: UIViewController {
                
                self.progressProcessando.layoutIfNeeded()
                
-               
-               
            }, completion: {(_) in
 
                self.viewProcessando.alpha = 0
                self.viewAnalise.alpha = 1
                
                })
-               
-               
        }
-       
-       func setUpView() {
-           
-           
-
-          
-       }
-
 }

@@ -20,7 +20,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         
         var dados: Dados
         dados = Dados(title: "Editar perfil", image: #imageLiteral(resourceName: "conversacao"))

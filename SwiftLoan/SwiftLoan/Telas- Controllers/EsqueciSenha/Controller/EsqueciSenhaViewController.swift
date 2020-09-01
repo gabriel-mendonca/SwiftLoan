@@ -24,7 +24,7 @@ class EsqueciSenhaViewController: UIViewController {
         
     }
     
-    func validate() {
+    private func validate() {
         
         guard (self.textEmail.text != "") else {
             self.alerta(title: "Aviso", mensagem: "Digite um email")

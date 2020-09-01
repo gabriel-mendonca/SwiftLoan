@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textEmail: UITextField!
     @IBOutlet weak var textSenha: UITextField!
     @IBOutlet weak var btnForgot: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +33,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    func validate() {
+    private func validate() {
         
         guard (self.textEmail.text != "")  else {
             self.alerta(title: "Aviso", mensagem: "Digite seu email ou CPF")

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import InputMask
 
 class AdressViewController: UIViewController {
 
@@ -41,19 +40,19 @@ class AdressViewController: UIViewController {
         }
     }
     
-    func carregando() {
+    private func carregando() {
         self.activityCarregando.alpha = 1
         self.activityCarregando.startAnimating()
         self.view.isUserInteractionEnabled = false
     }
     
-    func carregou()  {
+    private func carregou()  {
         self.activityCarregando.alpha = 0
         self.activityCarregando.stopAnimating()
         self.view.isUserInteractionEnabled = true
     }
     
-    func populaDados() {
+    private func populaDados() {
         self.textPais.text = "Brasil"
         self.textEstado.text = apiUsar.enderecoRetornado.uf ?? ""
         self.textCidade.text = apiUsar.enderecoRetornado.localidade ?? ""
@@ -70,7 +69,7 @@ class AdressViewController: UIViewController {
 
     }
     
-    func validate() {
+    private func validate() {
         
         guard (self.textCep.text != "") else {
             self.alerta(title: "Aviso", mensagem: "Digite seu cep")

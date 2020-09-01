@@ -10,8 +10,8 @@ import UIKit
 
 class CadastroViewController: UIViewController {
     
-    let toolbarData = UIToolbar()
-    let dataPicker = UIDatePicker()
+    private let toolbarData = UIToolbar()
+    private let dataPicker = UIDatePicker()
 
     @IBOutlet weak var textName: TextFieldSublinhada!
     @IBOutlet weak var textEmail: TextFieldSublinhada!
@@ -40,7 +40,7 @@ class CadastroViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func setupView() {
+    private func setupView() {
         self.toolbarData.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Concluído", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.concluidoPicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -61,7 +61,7 @@ class CadastroViewController: UIViewController {
         self.performSegue(withIdentifier: "screenAdress", sender: self)
     }
     
-    func validate() {
+    private func validate() {
         
         guard (self.textName.text ?? "") != "" else {
             self.alerta(title: "Aviso", mensagem: "Digite seu nome")

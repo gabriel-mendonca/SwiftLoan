@@ -326,9 +326,9 @@ extension UIViewController: UITextFieldDelegate {
                 }else{
                     textField.text = "(\(textField.text!)) "
                 }
-            } else if (textField.text?.count)! == 9 {
+            } else if (textField.text?.count)! == 10 {
                 textField.text = "\(textField.text!)-"
-            } else if (textField.text?.count)! > 13 {
+            } else if (textField.text?.count)! > 14 {
                 return false
             }else{
                 return true

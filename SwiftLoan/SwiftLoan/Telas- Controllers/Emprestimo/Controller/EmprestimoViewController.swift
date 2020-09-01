@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import  InputMask
 
 class EmprestimoViewController: UIViewController {
     
-    let toolbar = UIToolbar()
-    let pickerVencimento = UIPickerView()
+    private let toolbar = UIToolbar()
+    private let pickerVencimento = UIPickerView()
 
     @IBOutlet weak var OneParcela: UITextField!
     @IBOutlet weak var textParcelas: UITextField!
@@ -28,20 +27,7 @@ class EmprestimoViewController: UIViewController {
 
     }
     
-    let listMes = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12"
-    ]
+    private let listMes = (1...36).map(String.init)
     
     private var datePicker: UIDatePicker! {
            willSet(value) {
@@ -58,7 +44,7 @@ class EmprestimoViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func setupView() {
+   private func setupView() {
         
         self.toolbar.sizeToFit()
            let doneButtonEstado = UIBarButtonItem(title: "Concluído", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.concluidoEmissor))
@@ -106,7 +92,7 @@ class EmprestimoViewController: UIViewController {
         
     }
     
-    func validate() {
+    private func validate() {
         
         guard (textValue.text != "") else {
             self.alerta(title: "Aviso", mensagem: "Digite o valor de empréstimo!")

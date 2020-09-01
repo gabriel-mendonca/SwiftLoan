@@ -12,7 +12,8 @@ class ObjetivoEmprestimoViewController: UIViewController, UITableViewDataSource,
 
     @IBOutlet weak var tableView: UITableView!
     
-    var objetivo: [Dados] = []
+   private var objetivo: [Dados] = []
+   private let idCell = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ObjetivoEmprestimoViewController: UIViewController, UITableViewDataSource,
 
     }
     
-    func setupTableView() {
+   private func setupTableView() {
         
         var dado: Dados
         dado = Dados(title: "contas da casa", image: #imageLiteral(resourceName: "conta"))
@@ -41,7 +42,7 @@ class ObjetivoEmprestimoViewController: UIViewController, UITableViewDataSource,
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib (nibName: "ObjetivoEmprestimoTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.register(UINib (nibName: "ObjetivoEmprestimoTableViewCell", bundle: nil), forCellReuseIdentifier: idCell)
         
     }
     
@@ -57,7 +58,7 @@ class ObjetivoEmprestimoViewController: UIViewController, UITableViewDataSource,
         
         let dados: Dados = objetivo[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ObjetivoEmprestimoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! ObjetivoEmprestimoTableViewCell
         
         cell.imagem.image = dados.imagem
         cell.titulo.text = dados.titulo

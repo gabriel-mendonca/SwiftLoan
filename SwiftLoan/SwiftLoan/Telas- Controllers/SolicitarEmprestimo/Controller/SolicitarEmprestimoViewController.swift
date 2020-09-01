@@ -9,6 +9,8 @@
 import UIKit
 
 class SolicitarEmprestimoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    private let idCell = "cell"
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,11 +21,11 @@ class SolicitarEmprestimoViewController: UIViewController,UITableViewDelegate,UI
         
     }
     
-    func setupTableView() {
+   private func setupTableView() {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib (nibName: "SolicitarEmprestimoTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.register(UINib (nibName: "SolicitarEmprestimoTableViewCell", bundle: nil), forCellReuseIdentifier: idCell)
         
     }
     
@@ -32,7 +34,7 @@ class SolicitarEmprestimoViewController: UIViewController,UITableViewDelegate,UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SolicitarEmprestimoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: idCell, for: indexPath) as! SolicitarEmprestimoTableViewCell
         
         return cell
     }

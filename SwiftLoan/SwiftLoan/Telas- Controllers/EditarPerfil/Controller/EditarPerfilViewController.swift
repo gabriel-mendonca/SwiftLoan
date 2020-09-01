@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import InputMask
 
-class EditarPerfilViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate,MaskedTextFieldDelegateListener {
+class EditarPerfilViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var imagePicker = UIImagePickerController()
-    private let celular = MaskedTextFieldDelegate(format: Mask.phone.rawValue)
+    private var imagePicker = UIImagePickerController()
 
     @IBOutlet weak var textFone: UITextField!
     @IBOutlet weak var textName: UITextField!
@@ -22,12 +20,10 @@ class EditarPerfilViewController: UIViewController,UIImagePickerControllerDelega
         super.viewDidLoad()
         
         textName.text = "Gabriel Mendonça Sousa Gonçalves"
-        self.celular.listener = self
-        self.textFone.delegate = self.celular
-        
         textFone.text = "(34)98417-2997"
+        self.textFone.delegate = self
+        self.textFone.TipoMascaraUsar = 1
         
-
     }
     
     @IBAction func alteraFoto(_ sender: UIButton) {
@@ -77,14 +73,14 @@ class EditarPerfilViewController: UIViewController,UIImagePickerControllerDelega
      }
 
     
-    func openCamera(){
+    private func openCamera(){
           imagePicker =  UIImagePickerController()
           imagePicker.delegate = self
           imagePicker.sourceType = .camera
           present(imagePicker, animated: true, completion: nil)
       }
 
-      func openGallary(){
+    private func openGallary(){
           
           if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
               imagePicker.delegate = self
@@ -101,7 +97,7 @@ class EditarPerfilViewController: UIViewController,UIImagePickerControllerDelega
         
     }
     
-    func validate() {
+    private func validate() {
         
         guard (textName.text != "") else {
             self.alerta(title: "Aviso", mensagem: "Digite seu nome")

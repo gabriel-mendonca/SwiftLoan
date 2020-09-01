@@ -10,7 +10,7 @@ import UIKit
 
 class HistoricoSolicitacaoViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    var dadosCell: [InformacaoHistorico] = []
+    private var dadosCell: [InformacaoHistorico] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,7 @@ class HistoricoSolicitacaoViewController: UIViewController,UITableViewDataSource
         setupTableView()
     }
     
-    func setupTableView() {
+   private func setupTableView() {
         
         var dados: InformacaoHistorico
         dados = InformacaoHistorico(title: "Aprovado", image: #imageLiteral(resourceName: "lista (1)"), value: "R$:20.000,00")
